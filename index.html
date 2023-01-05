@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document</title>
+    <link rel="stylesheet" href="stylee.css">
+  </head>
+  <body>
+    <h1 class="hh">Percentage Calculator</h1>
+    <br />
+    <form >
+        <label for="totalMarks">Total Marks</label><br />
+        <input type="number" required id="totalMarks" placeholder="Enter your Total Marks" /><br />
+      <br />
+      <label for="obtaindMarks">Obtaind Marks</label><br />
+    <input type="number" id="obtaindMarks" placeholder="Enter your Obtaind Marks" /><br />
+
+    <button onclick="abs();return false;" type="submit">click me</button><br />
+    </form>
+    <h2 id="result">Risult</h2>
+
+
+    <script>
+      function abs() {
+        let totalMarks = +document.querySelector("#totalMarks").value;
+        let obtaindMarks = +document.querySelector("#obtaindMarks").value;
+ 
+        let result=obtaindMarks * 100 / totalMarks;
+        document.querySelector("#result").innerHTML=`you have got${result}%`;
+      }
+    </script>
+  </body>
+</html>
